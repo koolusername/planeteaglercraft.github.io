@@ -1,1 +1,2 @@
-# planeteaglercraft.github.io
+# PlanetEaglercraft
+because why not
