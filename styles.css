@@ -1,4 +1,27 @@
-/* Planet Minecraft-inspired stylesheet for Planet Eaglercraft */
+
+
+/*
+============================================================
+ Planet Eaglercraft Stylesheet
+============================================================
+This CSS file defines the layout, color palette, and UI elements for the Planet Eaglercraft website, inspired by Planet Minecraft.
+Each section and class is documented below for clarity and maintainability.
+
+Quick Reference:
+  - Responsive, mobile-first design
+  - Color palette: Blue (#3c5a99), Green (#7bb661), Dark (#222), Light (#fafafa, #fff, #e6e6e6)
+  - Main layout: Header, Navigation, Main Content, Cards, Footer
+  - Utility classes: .pmc-btn, .pmc-card, .pmc-grid, .pmc-main, .pmc-footer, .warning-page
+  - See /doc/styles.md for a full guide
+============================================================
+*/
+
+/*
+----------------------
+  Base & Body Styles
+----------------------
+body, html: Sets up the base font, background, and minimum height for the site.
+*/
 
 body, html {
     margin: 0;
@@ -9,6 +32,15 @@ body, html {
     color: #222;
 }
 
+
+/*
+----------------------
+  Header
+----------------------
+.pmc-header: Main site header bar, dark background, flex layout.
+.pmc-logo: Logo image in the header.
+.pmc-title: Site title next to the logo.
+*/
 .pmc-header {
     display: flex;
     align-items: center;
@@ -27,6 +59,16 @@ body, html {
     letter-spacing: 1px;
 }
 
+
+/*
+----------------------
+  Navigation Bar
+----------------------
+.pmc-nav: Main navigation bar, blue background.
+.pmc-nav-toggle: Hamburger button for mobile nav.
+.pmc-nav ul: Navigation links container.
+.pmc-nav ul li a: Navigation links, with hover and active states.
+*/
 .pmc-nav {
     background: #3c5a99;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -70,6 +112,13 @@ body, html {
     background: #4a6ea9;
 }
 
+
+/*
+----------------------
+  Main Content Area
+----------------------
+.pmc-main: Main content container, white card with shadow.
+*/
 .pmc-main {
     max-width: 1100px;
     margin: 2rem auto;
@@ -79,6 +128,15 @@ body, html {
     padding: 2.5rem 2.5rem 2rem 2.5rem;
 }
 
+
+/*
+----------------------
+  Grid & Cards
+----------------------
+.pmc-grid: CSS grid for featured cards.
+.pmc-card: Card container for featured content.
+.pmc-card a: Card links, with hover effect.
+*/
 .pmc-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -101,16 +159,27 @@ body, html {
     box-shadow: 0 4px 16px rgba(60,90,153,0.10);
     border: 1px solid #3c5a99;
 }
-.pmc-card a {
+
+/*
+  Card links: Only style non-button links inside cards. Prevents conflict with .pmc-btn.
+*/
+.pmc-card a:not(.pmc-btn) {
     color: #3c5a99;
     font-weight: 600;
     text-decoration: none;
 }
-.pmc-card a:hover {
+.pmc-card a:not(.pmc-btn):hover {
     color: #7bb661;
     text-decoration: underline;
 }
 
+
+/*
+----------------------
+  Buttons
+----------------------
+.pmc-btn: Main action buttons (Browse, Download, etc). Green text, blue background. On hover, blue text, green background.
+*/
 .pmc-btn {
     background: #3c5a99;
     color: #7bb661;
@@ -128,6 +197,13 @@ body, html {
     color: #3c5a99;
 }
 
+
+/*
+----------------------
+  Footer
+----------------------
+.pmc-footer: Site footer, dark background, white text.
+*/
 .pmc-footer {
     text-align: center;
     color: #fff;
@@ -138,6 +214,14 @@ body, html {
     border-top: 4px solid #3c5a99;
 }
 
+
+/*
+----------------------
+  Headings
+----------------------
+h1, h2, h3, h4, h5: Blue headings, bold, consistent font.
+h2: Section heading with green underline.
+*/
 h1, h2, h3, h4, h5 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: bold;
@@ -150,7 +234,13 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* Responsive nav */
+
+/*
+----------------------
+  Responsive Navigation
+----------------------
+@media (max-width: 700px): Stacks nav links, shows hamburger, adjusts padding for mobile.
+*/
 @media (max-width: 700px) {
     .pmc-header, .pmc-main {
         padding: 1rem;
@@ -180,7 +270,13 @@ h2 {
     }
 }
 
-/* Styles for warning page */
+
+/*
+----------------------
+  Warning Page
+----------------------
+.warning-page: Special layout for warning pages, centered content, yellow background.
+*/
 .warning-page, body.warning-page {
     display: flex;
     justify-content: center;
