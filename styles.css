@@ -1,104 +1,183 @@
-/* Main stylesheet for Planet Eaglercraft */
+/* Planet Minecraft-inspired stylesheet for Planet Eaglercraft */
 
 body, html {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f4f9;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #e6e6e6;
     color: #222;
 }
 
-header {
+.pmc-header {
+    display: flex;
+    align-items: center;
     background: #222;
     color: #fff;
-    padding: 2rem 0 1rem 0;
-    text-align: center;
+    padding: 1.2rem 2rem;
+    border-bottom: 4px solid #3c5a99;
+}
+.pmc-logo {
+    height: 48px;
+    margin-right: 1.2rem;
+}
+.pmc-title {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-nav {
-    background: #333;
+.pmc-nav {
+    background: #3c5a99;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
 }
-nav ul {
+.pmc-nav .pmc-nav-toggle {
+    display: none;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+}
+.pmc-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
 }
-nav ul li {
+.pmc-nav ul li {
     margin: 0 1.5rem;
 }
-nav ul li a {
+.pmc-nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     padding: 1rem 0;
     display: block;
-    transition: color 0.2s;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-radius: 6px 6px 0 0;
 }
-nav ul li a:hover {
-    color: #ffd700;
+.pmc-nav ul li a:hover, .pmc-nav ul li a.active {
+    color: #7bb661;
+    border-bottom: 3px solid #7bb661;
+    background: #4a6ea9;
 }
 
-main {
-    max-width: 900px;
+.pmc-main {
+    max-width: 1100px;
     margin: 2rem auto;
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 2rem 2.5rem;
-}
-section {
-    margin-bottom: 2.5rem;
-}
-h2 {
-    color: #222;
-    border-bottom: 2px solid #ffd700;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
 }
 
-ul.featured-maps, ul.featured-texturepacks {
+.pmc-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     padding: 0;
     list-style: none;
 }
-ul.featured-maps li, ul.featured-texturepacks li {
+.pmc-card {
     background: #fafafa;
-    border: 1px solid #eee;
-    border-radius: 8px;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
     padding: 1.2rem 1rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-    transition: box-shadow 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s, border 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-ul.featured-maps li:hover, ul.featured-texturepacks li:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+.pmc-card:hover {
+    box-shadow: 0 4px 16px rgba(60,90,153,0.10);
+    border: 1px solid #3c5a99;
 }
-ul.featured-maps li a, ul.featured-texturepacks li a {
-    color: #333;
+.pmc-card a {
+    color: #3c5a99;
     font-weight: 600;
     text-decoration: none;
 }
+.pmc-card a:hover {
+    color: #7bb661;
+    text-decoration: underline;
+}
 
-footer {
+.pmc-btn {
+    background: #3c5a99;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+}
+.pmc-btn:hover {
+    background: #7bb661;
+    color: #222;
+}
+
+.pmc-footer {
     text-align: center;
-    color: #888;
+    color: #fff;
     background: #222;
     padding: 1.2rem 0 0.5rem 0;
     margin-top: 2rem;
+    font-size: 1rem;
+    border-top: 4px solid #3c5a99;
 }
 
-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+h1, h2, h3, h4, h5 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: #3c5a99;
+    margin-top: 0;
+}
+h2 {
+    border-bottom: 2px solid #7bb661;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive nav */
+@media (max-width: 700px) {
+    .pmc-header, .pmc-main {
+        padding: 1rem;
+    }
+    .pmc-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        background: #3c5a99;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .pmc-nav ul.pmc-nav-open {
+        display: flex;
+    }
+    .pmc-nav .pmc-nav-toggle {
+        display: block;
+    }
+    .pmc-nav ul li {
+        margin: 0.5rem 1rem;
+    }
+    .pmc-main {
+        padding: 1rem;
+    }
 }
 
 /* Styles for warning page */

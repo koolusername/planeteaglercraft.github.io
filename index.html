@@ -6,28 +6,49 @@
     <title>Planet Eaglercraft</title>
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Planet Eaglercraft</h1>
-        <p><em>THE</em> community fan site for <b>Eaglercraft</b></p>
+    <header class="pmc-header">
+        <img src="logo.png" alt="Planet Eaglercraft Logo" class="pmc-logo">
+        <span class="pmc-title">Planet Eaglercraft</span>
     </header>
-    <nav>
+    <nav class="pmc-nav">
+        <button class="pmc-nav-toggle" aria-label="Toggle navigation">&#9776;</button>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="maps.html">Maps</a></li>
             <li><a href="skins.html">Skins</a></li>
             <li><a href="texturepacks.html">Texture Packs</a></li>
             <li><a href="servers.html">Servers</a></li>
         </ul>
     </nav>
-    <main>
-        <h2>Welcome!</h2> This is the community fan site for Eaglercraft. <br><br>Here, you can find a collection of maps, skins, and texture packs created by the community. <br><br>Feel free to explore and download the content shared by fellow Eaglercraft fans.
-
-        <br>
+    <main class="pmc-main">
+        <h2>Welcome!</h2>
+        <p>This is the community fan site for Eaglercraft.</p>
+        <p>Here, you can find a collection of maps, skins, and texture packs created by the community.</p>
+        <p>Feel free to explore and download the content shared by fellow Eaglercraft fans.</p>
+        <div class="pmc-grid">
+            <div class="pmc-card">
+                <h3>Featured Maps</h3>
+                <a href="maps.html" class="pmc-btn">Browse Maps</a>
+            </div>
+            <div class="pmc-card">
+                <h3>Featured Skins</h3>
+                <a href="skins.html" class="pmc-btn">Browse Skins</a>
+            </div>
+            <div class="pmc-card">
+                <h3>Featured Texture Packs</h3>
+                <a href="texturepacks.html" class="pmc-btn">Browse Texture Packs</a>
+            </div>
+            <div class="pmc-card">
+                <h3>Servers</h3>
+                <a href="servers.html" class="pmc-btn">View Servers</a>
+            </div>
+        </div>
     </main>
-    <footer>
-        <p>&copy; <span id="year"></span> PlanetEaglercraft. All rights reserved.</p>
+    <footer class="pmc-footer">
+        &copy; <span id="year"></span> PlanetEaglercraft. All rights reserved.
         <script src="main.js"></script>
     </footer>
 </body>

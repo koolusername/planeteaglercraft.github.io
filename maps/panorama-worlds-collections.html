@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet Eaglercraft</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css">
+    <title>Panorama Worlds Collections | Planet Eaglercraft</title>
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Planet Eaglercraft</h1>
+    <header class="pmc-header">
+        <img src="/logo.png" alt="Planet Eaglercraft Logo" class="pmc-logo">
+        <span class="pmc-title">Planet Eaglercraft</span>
     </header>
-    <nav>
+    <nav class="pmc-nav">
+        <button class="pmc-nav-toggle" aria-label="Toggle navigation">&#9776;</button>
         <ul>
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/maps.html">Maps</a></li>
+            <li><a href="/maps.html" class="active">Maps</a></li>
             <li><a href="/skins.html">Skins</a></li>
             <li><a href="/texturepacks.html">Texture Packs</a></li>
             <li><a href="/servers.html">Servers</a></li>
         </ul>
     </nav>
-    <main>
+    <main class="pmc-main">
         <h2>Panorama Worlds Collections</h2>
-        <img src="https://media.forgecdn.net/avatars/thumbnails/863/632/64/64/638272910243448847.png" alt="Panorama Worlds Collections Map Screenshot">
-        By: <a href="https://www.curseforge.com/members/loweredgamesdev/projects"LoweredgamesDev></a>
-            <section>
-                <h3>Downloada</h3>
-                <p>You can download the Classical Panorama 1.2.5 map from the following link:</p>
-                <a href="https://mediafilez.forgecdn.net/files/4692/196/Classical%20Panorama%201.2.5.zip">Download</a>
-                <p>You can download the Pack.png World 1.2.5 map from the following link:</p>
-                <a href="https://mediafilez.forgecdn.net/files/4692/191/Pack.png%20World%201.2.5.zip">Download</a>
-            </section></a>
+        <img src="https://media.forgecdn.net/avatars/thumbnails/863/632/64/64/638272910243448847.png" alt="Panorama Worlds Collections Map Screenshot" style="max-width: 300px; display: block; margin: 1.5rem auto;">
+        <p>By: <a href="https://www.curseforge.com/members/loweredgamesdev/projects">LoweredgamesDev</a></p>
+        <section>
+            <h3>Download</h3>
+            <p>You can download the Classical Panorama 1.2.5 map from the following link:</p>
+            <a href="https://mediafilez.forgecdn.net/files/4692/196/Classical%20Panorama%201.2.5.zip" class="pmc-btn">Download Classical Panorama</a>
+            <p>You can download the Pack.png World 1.2.5 map from the following link:</p>
+            <a href="https://mediafilez.forgecdn.net/files/4692/191/Pack.png%20World%201.2.5.zip" class="pmc-btn">Download Pack.png World</a>
         </section>
     </main>
-    <footer>
-        <p>&copy; <span id="year"></span> PlanetEaglercraft. All rights reserved.</p>
+    <footer class="pmc-footer">
+        &copy; <span id="year"></span> PlanetEaglercraft. All rights reserved.
         <script src="/main.js"></script>
     </footer>
+</body>
 </html>

@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet Eaglercraft</title>
+    <title>Warning | Planet Eaglercraft</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
+    <header class="pmc-header">
+        <img src="logo.png" alt="Planet Eaglercraft Logo" class="pmc-logo">
+        <span class="pmc-title">Planet Eaglercraft</span>
+    </header>
+    <nav class="pmc-nav">
+        <button class="pmc-nav-toggle" aria-label="Toggle navigation">&#9776;</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="maps.html">Maps</a></li>
@@ -16,10 +23,26 @@
             <li><a href="servers.html">Servers</a></li>
         </ul>
     </nav>
-    <img src="assets/warning.jpg">
-    <footer>
-        <p>&copy; <span id="year"></span> PlanetEaglercraft. All rights reserved.</p>
+    <main class="pmc-main warning-page">
+        <h2>Warning</h2>
+        <img src="assets/warning.jpg" alt="Warning" style="max-width: 100%; border-radius: 8px; margin: 2rem auto; display: block;">
+        <p style="color: #b00; font-weight: bold; text-align: center;">This page contains a warning image.</p>
+    </main>
+    <footer class="pmc-footer">
+        &copy; <span id="year"></span> PlanetEaglercraft. All rights reserved.
         <script src="main.js"></script>
+        <script>
+        // Mobile nav toggle
+        document.addEventListener('DOMContentLoaded', function() {
+          var navToggle = document.querySelector('.pmc-nav-toggle');
+          var navList = document.querySelector('.pmc-nav ul');
+          if (navToggle && navList) {
+            navToggle.addEventListener('click', function() {
+              navList.classList.toggle('pmc-nav-open');
+            });
+          }
+        });
+        </script>
     </footer>
 </body>
 </html>

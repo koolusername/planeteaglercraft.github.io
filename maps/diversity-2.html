@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet Eaglercraft</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css">
+    <title>Diversity 2 | Planet Eaglercraft</title>
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Planet Eaglercraft</h1>
+    <header class="pmc-header">
+        <img src="/logo.png" alt="Planet Eaglercraft Logo" class="pmc-logo">
+        <span class="pmc-title">Planet Eaglercraft</span>
     </header>
-    <nav>
+    <nav class="pmc-nav">
+        <button class="pmc-nav-toggle" aria-label="Toggle navigation">&#9776;</button>
         <ul>
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/maps.html">Maps</a></li>
+            <li><a href="/maps.html" class="active">Maps</a></li>
             <li><a href="/skins.html">Skins</a></li>
             <li><a href="/texturepacks.html">Texture Packs</a></li>
             <li><a href="/servers.html">Servers</a></li>
         </ul>
     </nav>
-    <main>
+    <main class="pmc-main">
         <h2>Diversity 2</h2>
-        <img src="https://static.planetminecraft.com/files/resource_media/screenshot/1418/div2_logo2.jpg" alt="Diversity 2 Map Screenshot">
-        <br>
-        By: <a href="https://www.curseforge.com/members/qmagnet/projects">qmagnet</a>
-            <section>
-                <h3>Download</h3>
-                <p>You can download the Diversity 2 map from the following link:</p>
-                <a href="https://mediafilez.forgecdn.net/files/2253/440/DIVERSITY%202%20PACKAGE%20-%20UNZIP%20THIS.zip">Download</a>
-            </section></a>
+        <img src="https://static.planetminecraft.com/files/resource_media/screenshot/1418/div2_logo2.jpg" alt="Diversity 2 Map Screenshot" style="max-width: 300px; display: block; margin: 1.5rem auto;">
+        <p>By: <a href="https://www.curseforge.com/members/qmagnet/projects">qmagnet</a></p>
+        <section>
+            <h3>Download</h3>
+            <p>You can download the Diversity 2 map from the following link:</p>
+            <a href="https://mediafilez.forgecdn.net/files/2253/440/DIVERSITY%202%20PACKAGE%20-%20UNZIP%20THIS.zip" class="pmc-btn">Download</a>
         </section>
     </main>
-    <footer>
-        <p>&copy; <span id="year"></span> PlanetEaglercraft. All rights reserved.</p>
+    <footer class="pmc-footer">
+        &copy; <span id="year"></span> PlanetEaglercraft. All rights reserved.
         <script src="/main.js"></script>
+        <script>
+        // Mobile nav toggle
+        document.addEventListener('DOMContentLoaded', function() {
+          var navToggle = document.querySelector('.pmc-nav-toggle');
+          var navList = document.querySelector('.pmc-nav ul');
+          if (navToggle && navList) {
+            navToggle.addEventListener('click', function() {
+              navList.classList.toggle('pmc-nav-open');
+            });
+          }
+        });
+        </script>
     </footer>
+</body>
 </html>
